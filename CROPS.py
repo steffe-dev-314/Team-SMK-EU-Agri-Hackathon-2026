@@ -1,76 +1,19 @@
-kulturen = [
-    "Winterweizen",
-    "Sommerweizen",
-    "Wintergerste",
-    "Sommergerste",
-    "Winterroggen",
-    "Wintertriticale",
-    "Hafer",
-    "Mais",
-    "Silomais",
-    "Körnermais",
-    "Winterraps",
-    "Zuckerrüben",
-    "Kartoffeln",
-    "Futterrüben",
-    "Erbsen",
-    "Ackerbohnen",
-    "Sojabohnen",
-    "Lupinen",
-    "Sonnenblumen",
-    "Klee",
-    "Luzerne",
-    "Grünland",
-    "Zwischenfrucht",
-    "Brache",
-    "Sonstige Kultur",
-]
+import json 
+import pandas as pd 
 
-vorfruechte = [
-    "Winterweizen",
-    "Sommerweizen",
-    "Wintergerste",
-    "Sommergerste",
-    "Winterroggen",
-    "Wintertriticale",
-    "Hafer",
-    "Mais",
-    "Silomais",
-    "Körnermais",
-    "Winterraps",
-    "Zuckerrüben",
-    "Kartoffeln",
-    "Erbsen",
-    "Ackerbohnen",
-    "Sojabohnen",
-    "Lupinen",
-    "Sonnenblumen",
-    "Kleegras",
-    "Luzerne",
-    "Grünland",
-    "Gemüse",
-    "Brache",
-    "Sonstige Vorfrucht",
+with open("NRW_CROPS.json", "r") as f:
+    NRW_CROPS = json.load(f)
+
+kulturen = [
+    crop for crop in NRW_CROPS
+    if not NRW_CROPS[crop]["Zwischenfrucht"]
 ]
 
 zwischenfruechte = [
-    "Senf",
-    "Ölrettich",
-    "Phacelia",
-    "Winterroggen",
-    "Welsches Weidelgras",
-    "Deutsches Weidelgras",
-    "Roggen-Wicken-Gemenge",
-    "Erbsen-Wicken-Gemenge",
-    "Klee",
-    "Kleegras",
-    "Luzerne",
-    "Buchweizen",
-    "Hafer",
-    "Rauhafer",
-    "Sonnenblumen",
-    "Leguminosen-Gemenge",
-    "Gräser-Gemenge",
-    "Mischung / Gemenge",
-    "Sonstige Zwischenfrucht",
+    crop.replace("(Zwischenfrucht)","").strip() for crop in NRW_CROPS
+    if NRW_CROPS[crop]["Zwischenfrucht"]
 ]
+
+N_BEDARF = {crop : NRW_CROPS[crop]['Stickstoffbedarf der Kultur'] for crop in NRW_CROPS}
+
+ERTRAEGE = {crop : NRW_CROPS[crop]['Ertrag der Kultur'] for crop in NRW_CROPS}
