@@ -1,7 +1,7 @@
 import json 
 import pandas as pd 
 
-with open("NRW_CROPS.json", "r") as f:
+with open("data/NRW_CROPS.json", "r") as f:
     NRW_CROPS = json.load(f)
 
 kulturen = [
@@ -10,7 +10,7 @@ kulturen = [
 ]
 
 zwischenfruechte = [
-    crop.replace("(Zwischenfrucht)","").strip() for crop in NRW_CROPS
+    crop for crop in NRW_CROPS
     if NRW_CROPS[crop]["Zwischenfrucht"]
 ]
 
