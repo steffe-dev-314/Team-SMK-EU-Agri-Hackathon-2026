@@ -87,11 +87,12 @@ with st.sidebar:
     st.caption("ADMIN")
 
 
-tab1, tab2, tab3 , tab4= st.tabs([
+tab1, tab2, tab3 , tab4 , tab5= st.tabs([
     "Allgemeine Angaben",
     "DBE - Stickstoff",
     "Dokumentation Stickstoffdüngung",
-    "Zusammenfassung und Export"
+    "Zusammenfassung und Export",
+    "TTT"
 ])
 
 
@@ -102,11 +103,15 @@ tab1, tab2, tab3 , tab4= st.tabs([
 with tab1:
     st.markdown("## Allgemeine Angaben")
 
+    # --------------------------------------------------
+    # FARM INFORMATION
+    # --------------------------------------------------
+
     st.markdown("### Betriebsdaten")
     c1, c2, c3 = st.columns(3)
 
     with c1:
-        duengejahr = st.date_input("Düngejahr", key="duengejahr")
+        duengejahr = st.text_input("Düngejahr", key="duengejahr")
 
     with c2:
         betriebsnr = st.text_input("Betriebsnummer", key="betriebsnr")
@@ -114,16 +119,266 @@ with tab1:
     with c3:
         betrieb = st.text_input("Betrieb", key="betrieb")
 
+    farm_metadata = {'Fert_Year' : duengejahr , 'farm_id' : betriebsnr , 'farm_name' : betrieb}
+
     st.divider()
+
+    # --------------------------------------------------
+    # CSV IMPORT
+    # --------------------------------------------------
+
+    st.markdown("### Schläge aus CSV importieren")
+    st.caption(
+        "Importiere mehrere Schläge auf einmal. "
+        "Die CSV benötigt eine Kopfzeile mit den folgenden Spalten."
+    )
+
+    csv_template = pd.DataFrame(columns=[
+        "Schlag",
+        "Feldblock-Nummer",
+        "Größe in ha",
+        "Vorjahreskultur",
+        "Zwischenfrucht",
+    ])
+
+    st.download_button(
+        label="CSV-Vorlage herunterladen",
+        data=csv_template.to_csv(
+            index=False,
+            sep=";",
+            encoding="utf-8-sig",
+        ),
+        file_name="schlaege_vorlage.csv",
+        mime="text/csv",
+    )
+
+    uploaded_csv = st.file_uploader(
+        "Schlagdaten-CSV auswählen",
+        type=["csv"],
+        key="schlag_csv_upload",
+    )
+
+    if uploaded_csv is not None:
+        try:
+            uploaded_csv.seek(0)
+
+            # Read semicolon-separated CSV first, then comma-separated.
+            csv_df = pd.read_csv(
+                uploaded_csv,
+                sep=";",
+                encoding="utf-8-sig",
+            )
+
+            if len(csv_df.columns) == 1:
+                uploaded_csv.seek(0)
+                csv_df = pd.read_csv(
+                    uploaded_csv,
+                    sep=",",
+                    encoding="utf-8-sig",
+                )
+
+            csv_df.columns = csv_df.columns.str.strip()
+
+            required_cols = [
+                "Schlag",
+                "Feldblock-Nummer",
+                "Größe in ha",
+                "Vorjahreskultur",
+                "Zwischenfrucht",
+            ]
+
+            missing_cols = [
+                col for col in required_cols
+                if col not in csv_df.columns
+            ]
+
+            if missing_cols:
+                st.error(
+                    "Folgende Spalten fehlen in der CSV: "
+                    + ", ".join(missing_cols)
+                )
+
+            else:
+                csv_df = csv_df[required_cols].copy()
+
+                for col in [
+                    "Schlag",
+                    "Vorjahreskultur",
+                    "Zwischenfrucht",
+                ]:
+                    csv_df[col] = (
+                        csv_df[col].astype("string").str.strip()
+                    )
+
+                csv_df["Feldblock-Nummer"] = pd.to_numeric(
+                    csv_df["Feldblock-Nummer"],
+                    errors="coerce",
+                )
+
+                csv_df["Größe in ha"] = pd.to_numeric(
+                    csv_df["Größe in ha"]
+                    .astype("string")
+                    .str.replace(",", ".", regex=False),
+                    errors="coerce",
+                )
+
+                valid_rows = []
+                errors = []
+
+                for idx, row in csv_df.iterrows():
+                    excel_row = idx + 2
+
+                    if pd.isna(row["Schlag"]) or not row["Schlag"]:
+                        errors.append(
+                            f"Zeile {excel_row}: Schlagname fehlt."
+                        )
+                        continue
+
+                    feldblock = row["Feldblock-Nummer"]
+
+                    if (
+                        pd.isna(feldblock)
+                        or feldblock < 0
+                        or not float(feldblock).is_integer()
+                    ):
+                        errors.append(
+                            f"Zeile {excel_row}: "
+                            "Feldblock-Nummer ungültig."
+                        )
+                        continue
+
+                    area = row["Größe in ha"]
+
+                    if pd.isna(area) or area <= 0:
+                        errors.append(
+                            f"Zeile {excel_row}: "
+                            "Schlaggröße muss größer als 0 sein."
+                        )
+                        continue
+
+                    vj_kultur = row["Vorjahreskultur"]
+
+                    if (
+                        pd.isna(vj_kultur)
+                        or vj_kultur not in kulturen
+                    ):
+                        errors.append(
+                            f"Zeile {excel_row}: "
+                            f"Unbekannte Vorjahreskultur "
+                            f"'{vj_kultur}'."
+                        )
+                        continue
+
+                    zwischenfrucht = row["Zwischenfrucht"]
+
+                    if (
+                        pd.isna(zwischenfrucht)
+                        or zwischenfrucht == ""
+                    ):
+                        zwischenfrucht = "Keine"
+
+                    if zwischenfrucht not in ["Keine"] + zwischenfruechte:
+                        errors.append(
+                            f"Zeile {excel_row}: "
+                            f"Unbekannte Zwischenfrucht "
+                            f"'{zwischenfrucht}'."
+                        )
+                        continue
+
+                    valid_rows.append({
+                        "Schlag": str(row["Schlag"]),
+                        "Feldblock-Nummer": int(feldblock),
+                        "Größe in ha": float(area),
+                        "Vorjahreskultur": str(vj_kultur),
+                        "Zwischenfrucht": str(zwischenfrucht),
+                    })
+
+                if errors:
+                    st.warning(
+                        "Einige Zeilen enthalten Fehler. "
+                        "Bitte korrigiere die CSV und lade sie erneut hoch."
+                    )
+
+                    for error in errors:
+                        st.write(f"- {error}")
+
+                if valid_rows:
+                    st.markdown("#### Vorschau")
+                    st.dataframe(
+                        pd.DataFrame(valid_rows),
+                        use_container_width=True,
+                        hide_index=True,
+                    )
+
+                    if st.button(
+                        "Schläge importieren",
+                        type="primary",
+                        key="import_schlaege_csv",
+                    ):
+                        new_parcels = {}
+                        duplicate_ids = []
+
+                        existing_ids = set(
+                            st.session_state.schlag_collection.keys()
+                        )
+
+                        for parcel in valid_rows:
+                            s_id = (
+                                f"S{parcel['Feldblock-Nummer']}_"
+                                f"{int(parcel['Größe in ha'])}ha"
+                            )
+
+                            if (
+                                s_id in existing_ids
+                                or s_id in new_parcels
+                            ):
+                                duplicate_ids.append(s_id)
+                            else:
+                                new_parcels[s_id] = parcel
+
+                        if duplicate_ids:
+                            st.warning(
+                                "Diese Schlag-IDs existieren bereits "
+                                "oder kommen mehrfach in der CSV vor: "
+                                + ", ".join(duplicate_ids)
+                            )
+
+                        if new_parcels:
+                            st.session_state.schlag_collection.update(
+                                new_parcels
+                            )
+
+                            st.success(
+                                f"{len(new_parcels)} Schläge "
+                                "erfolgreich importiert."
+                            )
+                            st.rerun()
+
+        except Exception as e:
+            st.error(f"Die CSV konnte nicht gelesen werden: {e}")
+
+    st.divider()
+
+    # --------------------------------------------------
+    # MANUAL PARCEL ENTRY
+    # --------------------------------------------------
+
     st.markdown("### Schlagdaten")
-    st.caption("Erfasse einen Schlag und ordne ihm die Kulturen zu.")
+    st.caption(
+        "Erfasse einen Schlag und ordne ihm die Vorjahres- "
+        "und Zwischenfrucht zu. Die aktuelle Kultur wird in "
+        "der DBE-Berechnung ausgewählt."
+    )
 
     with st.form("Schlagdaten"):
         st.markdown("**1. Identifikation und Fläche**")
         c1, c2, c3 = st.columns([2, 1, 1])
 
         with c1:
-            schlag = st.text_input("Schlagname", key="schlag_in")
+            schlag = st.text_input(
+                "Schlagname",
+                key="schlag_in",
+            )
 
         with c2:
             feldblock_nr = st.number_input(
@@ -144,17 +399,9 @@ with tab1:
             )
 
         st.markdown("**2. Fruchtfolge**")
-        c1, c2, c3 = st.columns(3)
+        c1, c2 = st.columns(2)
 
         with c1:
-            kultur = st.selectbox(
-                "Aktuelle Kultur",
-                options=kulturen,
-                key="kultur",
-                placeholder="Kultur auswählen",
-            )
-
-        with c2:
             vj_kultur = st.selectbox(
                 "Vorjahreskultur",
                 options=kulturen,
@@ -162,7 +409,7 @@ with tab1:
                 placeholder="Kultur auswählen",
             )
 
-        with c3:
+        with c2:
             zwischenfrucht = st.selectbox(
                 "Zwischenfrucht (optional)",
                 options=["Keine"] + zwischenfruechte,
@@ -170,6 +417,7 @@ with tab1:
             )
 
         st.divider()
+
         submit_schlag = st.form_submit_button(
             "Schlag hinzufügen",
             type="primary",
@@ -181,28 +429,28 @@ with tab1:
         and feldblock_nr is not None
         and schlag_gr is not None
         and schlag_gr > 0
-        and kultur is not None
         and vj_kultur is not None
     )
 
     if submit_schlag and non_empty:
         schlag_data_new = {
             "Schlag": schlag.strip(),
-            "Feldblock-Nummer": feldblock_nr,
-            "Größe in ha": schlag_gr,
-            "Kultur": kultur,
+            "Feldblock-Nummer": int(feldblock_nr),
+            "Größe in ha": float(schlag_gr),
             "Vorjahreskultur": vj_kultur,
             "Zwischenfrucht": zwischenfrucht,
         }
 
-        s_id = f"S{feldblock_nr}_{int(schlag_gr)}ha"
+        s_id = f"S{int(feldblock_nr)}_{int(schlag_gr)}ha"
 
         if s_id in st.session_state.schlag_collection:
             st.warning("Dieser Schlag wurde bereits eingetragen.")
         else:
             st.session_state.schlag_collection[s_id] = schlag_data_new
             st.session_state.reset_schlag_data = True
-            st.success(f"Schlag '{schlag.strip()}' wurde eingetragen.")
+            st.success(
+                f"Schlag '{schlag.strip()}' wurde eingetragen."
+            )
             st.rerun()
 
     elif submit_schlag:
@@ -237,7 +485,6 @@ with tab2:
     selected_schlag = None
     schlag_data = None
 
-    calc_new = False
     show_data = False
     submit_dbe = False
 
@@ -248,28 +495,52 @@ with tab2:
             key="selected_schlag_dbe",
         )
     else:
-        st.warning('Erstmal Schläge in "Allgemeine Angaben" eintragen!')
+        st.warning(
+            'Erstmal Schläge in "Allgemeine Angaben" eintragen!'
+        )
 
     if selected_schlag is not None:
         schlag_data = st.session_state.schlag_collection[selected_schlag]
 
-        crop_name = schlag_data["Kultur"]
-        crop_name_vj = schlag_data["Vorjahreskultur"]
         schlag_name = schlag_data["Schlag"]
+        crop_name_vj = schlag_data["Vorjahreskultur"]
         zwischen_name = schlag_data["Zwischenfrucht"]
 
-        # Dates are stored per parcel
-        seed_date = st.date_input(
-            f"Datum der Aussaat von {crop_name}",
-            key=f"seed_date_{selected_schlag}",
+        # Current crop is now selected in Tab 2.
+        saved_crop = schlag_data.get("Kultur")
+
+        crop_index = (
+            kulturen.index(saved_crop)
+            if saved_crop in kulturen
+            else None
         )
-        schlag_data["Datum der Aussaat"] = seed_date.strftime("%d.%m.%Y")
+
+        crop_name = st.selectbox(
+            "Aktuelle Kultur für die DBE",
+            options=kulturen,
+            index=crop_index,
+            placeholder="Kultur auswählen",
+            key=f"kultur_dbe_{selected_schlag}",
+        )
+
+        if crop_name is not None:
+            schlag_data["Kultur"] = crop_name
+
+            seed_date = st.date_input(
+                f"Datum der Aussaat von {crop_name}",
+                key=f"seed_date_{selected_schlag}",
+            )
+
+            schlag_data["Datum der Aussaat"] = (
+                seed_date.strftime("%d.%m.%Y")
+            )
 
         if zwischen_name != "Keine":
             zwischen_date = st.date_input(
                 f"Datum der Aussaat von {zwischen_name}",
                 key=f"seed_date_zwischen_{selected_schlag}",
             )
+
             schlag_data["Datum der Aussaat Zwischenfrucht"] = (
                 zwischen_date.strftime("%d.%m.%Y")
             )
@@ -302,14 +573,22 @@ with tab2:
             if show_data:
                 st.write(schlag_data)
 
-    # Show the form if no DBE exists or recalculation was requested
-    if selected_schlag is not None and (
-        "Stickstoffbedarf durch Dünger in kg / ha" not in schlag_data
-        or st.session_state.get(f"recalculate_{selected_schlag}", False)
+    # Show the form only if a current crop has been selected.
+    if (
+        selected_schlag is not None
+        and crop_name is not None
+        and (
+            "Stickstoffbedarf durch Dünger in kg / ha" not in schlag_data
+            or st.session_state.get(
+                f"recalculate_{selected_schlag}", False
+            )
+        )
     ):
         with st.form(f"Eingabe Daten für DBE_{selected_schlag}"):
             st.markdown("### Bodendaten")
-            st.caption("Angaben zum aktuellen Zustand des Schlages.")
+            st.caption(
+                "Angaben zum aktuellen Zustand des Schlages."
+            )
 
             c1, c2, c3 = st.columns(3)
 
@@ -391,25 +670,31 @@ with tab2:
                     )
 
             dbe_args = {
-                'Hauptfrucht':
-                {
-                'Datum' : seed_date ,
-                'Kultur' : crop_name ,
-                'Ertrag laut DüV' : get_duev_ertrag(crop_name) , 
-                'Durchschnittsertrag 5 Jahre Betrieb' : Yield_5yr_mean , 
-                'N-Bedarfswert' : get_n_bedarf(crop_name),
-                'Abschlag Ertragsdifferenz' : get_ertrag_correction(crop_name , Yield_5yr_mean), 
-                'N_min Probe / Richtwert' : N_min , 
-                'Standort / Humus' : get_humus_correction(humus) , 
-                'Abschlag Vorfrucht' : N_vor , 
-                'Abschlag Zwischenfrucht' : N_zw
+                "Hauptfrucht": {
+                    "Datum": seed_date,
+                    "Kultur": crop_name,
+                    "Ertrag laut DüV": get_duev_ertrag(crop_name),
+                    "Durchschnittsertrag 5 Jahre Betrieb": Yield_5yr_mean,
+                    "N-Bedarfswert": get_n_bedarf(crop_name),
+                    "Abschlag Ertragsdifferenz": get_ertrag_correction(
+                        crop_name, Yield_5yr_mean
+                    ),
+                    "N_min Probe / Richtwert": N_min,
+                    "Standort / Humus": get_humus_correction(humus),
+                    "Abschlag Vorfrucht": N_vor,
+                    "Abschlag Zwischenfrucht": N_zw,
                 },
-
-                'Zwischenfrucht' : 
-                {'N-Bedarf' : get_n_bedarf(zwischen_name) if zwischen_name != 'Keine' else 'Keine'}
-                }   
+                "Zwischenfrucht": {
+                    "N-Bedarf": (
+                        get_n_bedarf(zwischen_name)
+                        if zwischen_name != "Keine"
+                        else "Keine"
+                    )
+                },
+            }
 
             st.divider()
+
             submit_dbe = st.form_submit_button(
                 "DBE berechnen",
                 type="primary",
@@ -417,8 +702,6 @@ with tab2:
             )
 
         if submit_dbe:
-            
-
             dbe = streamlit_bde_wrapper(
                 schlag=crop_name,
                 mean_5_yrs=Yield_5yr_mean,
@@ -429,25 +712,31 @@ with tab2:
                 N_zw=N_zw,
             )
 
-            schlag_data["Stickstoffbedarf durch Dünger in kg / ha"] = round(dbe, 2)
-            schlag_data['DBE_Args'] = dbe_args
+            schlag_data["Stickstoffbedarf durch Dünger in kg / ha"] = (
+                round(dbe, 2)
+            )
+            schlag_data["DBE_Args"] = dbe_args
             st.session_state[recalc_key] = False
-
-            if "DBE_Args" in schlag_data:
-                st.write(dbe_args)
-
 
             st.success("DBE wurde berechnet und gespeichert.")
             st.rerun()
 
-    # Always display the saved DBE, including after a rerun
-    if selected_schlag is not None and "Stickstoffbedarf durch Dünger in kg / ha" in schlag_data:
+    # Always display the saved DBE.
+    if (
+        selected_schlag is not None
+        and "Stickstoffbedarf durch Dünger in kg / ha" in schlag_data
+    ):
         st.divider()
-        st.subheader("Ergebnis der Stickstoff-Düngebedarfsermittlung")
+        st.subheader(
+            "Ergebnis der Stickstoff-Düngebedarfsermittlung"
+        )
 
         st.metric(
             label=f"Berechneter Stickstoffbedarf · {selected_schlag}",
-            value=f"{schlag_data['Stickstoffbedarf durch Dünger in kg / ha']:.2f} kg N/ha",
+            value=(
+                f"{schlag_data['Stickstoffbedarf durch Dünger in kg / ha']:.2f} "
+                "kg N/ha"
+            ),
         )
 
         st.info(
@@ -455,7 +744,6 @@ with tab2:
             f"**{selected_schlag}** beträgt "
             f"**{schlag_data['Stickstoffbedarf durch Dünger in kg / ha']:.2f} kg N/ha**."
         )
-
 # --------------------------------------------------
 # FERTILISATION DOCUMENTATION
 # --------------------------------------------------
@@ -726,3 +1014,65 @@ with tab4:
                     use_container_width=True,
                     hide_index=True,
                 )
+
+# TAB 5 — EXPORT
+# --------------------------------------------------
+
+from form_to_csv import get_dbe_rows, get_fert_rows, add_rows , fill_top_rows
+
+with tab5:
+    st.markdown("## Export")
+
+    if not st.session_state.schlag_collection:
+        st.info("Bitte zunächst Schläge in 'Allgemeine Angaben' eintragen.")
+
+    else:
+        schlag_ids = list(st.session_state.schlag_collection.keys())
+
+        selected_schlag = st.selectbox(
+            "Schlag für den Export auswählen",
+            options=schlag_ids,
+            format_func=lambda s_id: (
+                st.session_state.schlag_collection[s_id]["Schlag"]
+            ),
+            key="export_schlag",
+        )
+
+        if selected_schlag is not None:
+            schlag_data = st.session_state.schlag_collection[selected_schlag]
+
+            dbe_cols = get_dbe_rows(schlag_data)
+            fert_cols = get_fert_rows(selected_schlag, schlag_data)
+
+            top_rows = fill_top_rows(
+                schlag_data,
+                farm_metadata,
+            )
+
+            export_df = add_rows(
+                dbe_cols=dbe_cols,
+                fert_cols=fert_cols,
+                top_rows=top_rows,
+                area=schlag_data["Größe in ha"],
+            )
+
+
+            st.markdown("### Vorschau")
+            st.dataframe(export_df, use_container_width=True)
+
+            """
+            csv = export_df.to_csv(
+                index=False,
+                header=False,
+                sep=";",
+                decimal=",",
+                encoding="utf-8-sig",
+            )
+
+            st.download_button(
+                label="CSV herunterladen",
+                data=csv,
+                file_name=f"{schlag_data['Schlag']}_export.csv",
+                mime="text/csv",
+            )   
+            """
