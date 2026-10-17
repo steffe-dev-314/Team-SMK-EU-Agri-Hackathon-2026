@@ -2,15 +2,58 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import json
+from pathlib import Path
 
 from CROPS import zwischenfruechte, kulturen
 from FERTILIZERS import FERTILZER_VALUES
-from calc_engine import streamlit_bde_wrapper , get_duev_ertrag , get_n_bedarf , get_ertrag_correction , get_humus_correction
+from calc_engine import (
+    streamlit_bde_wrapper,
+    get_duev_ertrag,
+    get_n_bedarf,
+    get_ertrag_correction,
+    get_humus_correction,
+)
 from datetime import datetime
 
 
 st.set_page_config(page_title="DBE - Stickstoff", layout="wide")
 st.logo(".streamlit/logo.png", size="large")
+
+
+# --------------------------------------------------
+# FARM METADATA PERSISTENCE
+# --------------------------------------------------
+
+FARM_METADATA_PATH = Path("data/farm_metadata.json")
+
+
+def load_farm_metadata():
+    if FARM_METADATA_PATH.exists():
+        try:
+            with FARM_METADATA_PATH.open("r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            if isinstance(data, dict):
+                return {
+                    "duengejahr": str(data.get("duengejahr", "")),
+                    "betriebsnr": str(data.get("betriebsnr", "")),
+                    "betrieb": str(data.get("betrieb", "")),
+                }
+
+        except (OSError, json.JSONDecodeError):
+            pass
+
+    return {
+        "duengejahr": "",
+        "betriebsnr": "",
+        "betrieb": "",
+    }
+
+
+def save_farm_metadata(metadata):
+    with FARM_METADATA_PATH.open("w", encoding="utf-8") as f:
+        json.dump(metadata, f, ensure_ascii=False, indent=2)
 
 
 # --------------------------------------------------
@@ -36,6 +79,17 @@ def init_st():
     if "fert_collection" not in st.session_state:
         st.session_state.fert_collection = {}
 
+    if "farm_metadata" not in st.session_state:
+        st.session_state.farm_metadata = load_farm_metadata()
+
+    # Restore farm data into the text-input widgets.
+    for key in ("duengejahr", "betriebsnr", "betrieb"):
+        if key not in st.session_state:
+            st.session_state[key] = st.session_state.farm_metadata.get(
+                key, ""
+            )
+
+
 init_st()
 
 
@@ -55,8 +109,9 @@ if st.session_state.reset_full:
     st.session_state.zwischenfrucht = "Keine"
 
     st.session_state.fert_count = 0
+    st.session_state.fert_collection = {}
 
-    # recalc keys reset 
+    # Reset calculation flags.
     for key in list(st.session_state.keys()):
         if key.startswith("recalculate_"):
             del st.session_state[key]
@@ -87,13 +142,10 @@ with st.sidebar:
     st.caption("ADMIN")
 
 
-tab1, tab2, tab3 , tab4 , tab5= st.tabs([
+tab1, tab2, tab3 = st.tabs([
     "Allgemeine Angaben",
     "DBE - Stickstoff",
-    "Dokumentation Stickstoffdüngung",
-    "Zusammenfassung und Export",
-    "TTT"
-])
+    "Dokumentation Stickstoffdüngung"])
 
 
 # --------------------------------------------------
@@ -111,15 +163,37 @@ with tab1:
     c1, c2, c3 = st.columns(3)
 
     with c1:
-        duengejahr = st.text_input("Düngejahr", key="duengejahr")
+        duengejahr = st.text_input(
+            "Düngejahr",
+            key="duengejahr",
+        )
 
     with c2:
-        betriebsnr = st.text_input("Betriebsnummer", key="betriebsnr")
+        betriebsnr = st.text_input(
+            "Betriebsnummer",
+            key="betriebsnr",
+        )
 
     with c3:
-        betrieb = st.text_input("Betrieb", key="betrieb")
+        betrieb = st.text_input(
+            "Betrieb",
+            key="betrieb",
+        )
 
-    farm_metadata = {'Fert_Year' : duengejahr , 'farm_id' : betriebsnr , 'farm_name' : betrieb}
+    # Save the current values to session state and disk.
+    st.session_state.farm_metadata = {
+        "duengejahr": duengejahr,
+        "betriebsnr": betriebsnr,
+        "betrieb": betrieb,
+    }
+
+    try:
+        save_farm_metadata(st.session_state.farm_metadata)
+    except OSError as e:
+        st.warning(
+            f"Die Betriebsdaten konnten nicht dauerhaft gespeichert "
+            f"werden: {e}"
+        )
 
     st.divider()
 
@@ -162,7 +236,6 @@ with tab1:
         try:
             uploaded_csv.seek(0)
 
-            # Read semicolon-separated CSV first, then comma-separated.
             csv_df = pd.read_csv(
                 uploaded_csv,
                 sep=";",
@@ -484,6 +557,8 @@ with tab2:
 
     selected_schlag = None
     schlag_data = None
+    crop_name = None
+    seed_date = None
 
     show_data = False
     submit_dbe = False
@@ -492,6 +567,10 @@ with tab2:
         selected_schlag = st.selectbox(
             label="Schlag auswählen",
             options=list(st.session_state.schlag_collection.keys()),
+            format_func=lambda s_id: (
+                f"{st.session_state.schlag_collection[s_id].get('Schlag', 'Unbenannter Schlag')} "
+                f"({s_id})"
+            ),
             key="selected_schlag_dbe",
         )
     else:
@@ -506,7 +585,6 @@ with tab2:
         crop_name_vj = schlag_data["Vorjahreskultur"]
         zwischen_name = schlag_data["Zwischenfrucht"]
 
-        # Current crop is now selected in Tab 2.
         saved_crop = schlag_data.get("Kultur")
 
         crop_index = (
@@ -573,7 +651,6 @@ with tab2:
             if show_data:
                 st.write(schlag_data)
 
-    # Show the form only if a current crop has been selected.
     if (
         selected_schlag is not None
         and crop_name is not None
@@ -721,7 +798,6 @@ with tab2:
             st.success("DBE wurde berechnet und gespeichert.")
             st.rerun()
 
-    # Always display the saved DBE.
     if (
         selected_schlag is not None
         and "Stickstoffbedarf durch Dünger in kg / ha" in schlag_data
@@ -744,74 +820,124 @@ with tab2:
             f"**{selected_schlag}** beträgt "
             f"**{schlag_data['Stickstoffbedarf durch Dünger in kg / ha']:.2f} kg N/ha**."
         )
+
+
 # --------------------------------------------------
 # FERTILISATION DOCUMENTATION
 # --------------------------------------------------
 
 with tab3:
     st.markdown("## Dokumentation Stickstoffdüngung")
+
     st.info(
         "Die Dokumentation der einzelnen Düngungsereignisse "
         "wird im nächsten Schritt implementiert."
     )
 
-    if st.session_state.schlag_collection:
+    # Only show parcels with a completed DBE.
+    dbe_schlaege = {
+        s_id: parcel
+        for s_id, parcel in st.session_state.schlag_collection.items()
+        if parcel.get("Stickstoffbedarf durch Dünger in kg / ha")
+        is not None
+    }
+
+    if not dbe_schlaege:
+        st.info(
+            "Für keinen Schlag liegt bisher eine berechnete DBE vor. "
+            "Bitte berechne zuerst die DBE im Reiter "
+            "'DBE - Stickstoff'. Erst danach kann die "
+            "Düngedokumentation erfasst werden."
+        )
+
+    else:
         selected_schlag = st.selectbox(
             label="Schlag auswählen",
-            options=list(st.session_state.schlag_collection.keys()),
+            options=list(dbe_schlaege.keys()),
+            format_func=lambda s_id: (
+                f"{dbe_schlaege[s_id].get('Schlag', 'Unbenannter Schlag')} "
+                f"({s_id})"
+            ),
             key="selected_schlag_duev_doc",
         )
 
-    if selected_schlag:
+        # Preserve existing fertilizer entries.
+        if selected_schlag not in st.session_state.fert_collection:
+            st.session_state.fert_collection[selected_schlag] = {}
 
-        st.session_state.fert_collection[selected_schlag] = {}
+        cc1, cc2 = st.columns(2)
 
-        cc1 , cc2 = st.columns(2)
         with cc1:
-            if st.button("Düngung hinzufügen"):
+            if st.button(
+                "Düngung hinzufügen",
+                key="add_fertilizer_event",
+            ):
                 st.session_state.fert_count += 1
 
-        with cc2: 
-            if st.button("Düngung entfernen"):
-                if st.session_state.fert_count >1: 
+        with cc2:
+            if st.button(
+                "Düngung entfernen",
+                key="remove_fertilizer_event",
+            ):
+                if st.session_state.fert_count > 0:
                     st.session_state.fert_count -= 1
 
         for i in range(st.session_state.fert_count):
-            
-            d_id = f'{selected_schlag}_DG_{i+1}'
+            d_id = f"{selected_schlag}_DG_{i + 1}"
 
-            c1, c2, c3=  st.columns(3)
+            c1, c2, c3 = st.columns(3)
 
             with c1:
                 date_fert = st.date_input(
                     "Datum der Düngung",
-                    key=f"date_fert_{i}",
+                    key=f"date_fert_{selected_schlag}_{i}",
                 )
 
             with c2:
-                type_fert = st.selectbox(label = 'Art des Düngers' , options=FERTILZER_VALUES.keys() , key = f"type_fert_{i}")
-            
-            unit_fert = FERTILZER_VALUES[type_fert]['einheit']
+                type_fert = st.selectbox(
+                    label="Art des Düngers",
+                    options=FERTILZER_VALUES.keys(),
+                    key=f"type_fert_{selected_schlag}_{i}",
+                )
+
+            unit_fert = FERTILZER_VALUES[type_fert]["einheit"]
+
             with c3:
                 amt_fert = st.number_input(
                     f"Genutzte Menge in {unit_fert}",
                     min_value=0.0,
-                    key=f"amt_fert_{i}",
+                    key=f"amt_fert_{selected_schlag}_{i}",
                 )
-    
-            if date_fert and type_fert and unit_fert and amt_fert:        
 
-                st.session_state.fert_collection[selected_schlag][d_id] = {'Datum' : date_fert , 
-                                                                           'Düngetyp' : type_fert ,
-                                                                           'Einheit' : unit_fert , 
-                                                                           f'Düngemente in {unit_fert} / ha' : amt_fert, 
-                                                                           f'Stickstoff Gesamt in {unit_fert} / ha' : amt_fert*FERTILZER_VALUES[type_fert]['Nges pro Einheit'],
-                                                                           f'Stickstoff Pflanzenverfügbar in {unit_fert} / ha' : amt_fert*FERTILZER_VALUES[type_fert]['Npfluer pro Einheit']}
-            
-        st.session_state.schlag_collection[selected_schlag]['Düngeinformation'] = st.session_state.fert_collection[selected_schlag]
-        st.write(st.session_state.schlag_collection)
+            if date_fert and type_fert and unit_fert and amt_fert > 0:
+                st.session_state.fert_collection[
+                    selected_schlag
+                ][d_id] = {
+                    "Datum": date_fert,
+                    "Düngetyp": type_fert,
+                    "Einheit": unit_fert,
+                    f"Düngemente in {unit_fert} / ha": amt_fert,
+                    f"Stickstoff Gesamt in {unit_fert} / ha": (
+                        amt_fert
+                        * FERTILZER_VALUES[type_fert]["Nges pro Einheit"]
+                    ),
+                    f"Stickstoff Pflanzenverfügbar in {unit_fert} / ha": (
+                        amt_fert
+                        * FERTILZER_VALUES[type_fert]["Npfluer pro Einheit"]
+                    ),
+                }
 
+        st.session_state.schlag_collection[
+            selected_schlag
+        ]["Düngeinformation"] = st.session_state.fert_collection[
+            selected_schlag
+        ]
 
+        #st.write(
+        #    st.session_state.schlag_collection[selected_schlag]
+        #)
+
+"""
 # --------------------------------------------------
 # SUMMARY AND EXPORT
 # --------------------------------------------------
@@ -823,7 +949,6 @@ with tab4:
         st.info("Bitte zunächst Schläge in 'Allgemeine Angaben' eintragen.")
 
     else:
-        # Only include parcels with both DBE and fertilizer data
         eligible_schlaege = {
             s_id: schlag_data
             for s_id, schlag_data in st.session_state.schlag_collection.items()
@@ -898,6 +1023,7 @@ with tab4:
                 })
 
             dbe_df = pd.DataFrame(dbe_rows)
+
             st.dataframe(
                 dbe_df,
                 use_container_width=True,
@@ -981,8 +1107,6 @@ with tab4:
                 comparison_rows.append({
                     "Schlag": schlag_data.get("Schlag"),
                     "Fläche (ha)": area,
-
-                    # Hektarbezogen
                     "DBE (kg N/ha)": dbe_per_ha,
                     "Pflanzenverfügbares N (kg N/ha)": (
                         n_available_per_ha
@@ -990,8 +1114,6 @@ with tab4:
                     "Differenz (kg N/ha)": (
                         dbe_per_ha - n_available_per_ha
                     ),
-
-                    # Flächenbezogen
                     "DBE gesamt (kg N)": dbe_total,
                     "Pflanzenverfügbares N gesamt (kg N)": (
                         n_available_total
@@ -1014,65 +1136,4 @@ with tab4:
                     use_container_width=True,
                     hide_index=True,
                 )
-
-# TAB 5 — EXPORT
-# --------------------------------------------------
-
-from form_to_csv import get_dbe_rows, get_fert_rows, add_rows , fill_top_rows
-
-with tab5:
-    st.markdown("## Export")
-
-    if not st.session_state.schlag_collection:
-        st.info("Bitte zunächst Schläge in 'Allgemeine Angaben' eintragen.")
-
-    else:
-        schlag_ids = list(st.session_state.schlag_collection.keys())
-
-        selected_schlag = st.selectbox(
-            "Schlag für den Export auswählen",
-            options=schlag_ids,
-            format_func=lambda s_id: (
-                st.session_state.schlag_collection[s_id]["Schlag"]
-            ),
-            key="export_schlag",
-        )
-
-        if selected_schlag is not None:
-            schlag_data = st.session_state.schlag_collection[selected_schlag]
-
-            dbe_cols = get_dbe_rows(schlag_data)
-            fert_cols = get_fert_rows(selected_schlag, schlag_data)
-
-            top_rows = fill_top_rows(
-                schlag_data,
-                farm_metadata,
-            )
-
-            export_df = add_rows(
-                dbe_cols=dbe_cols,
-                fert_cols=fert_cols,
-                top_rows=top_rows,
-                area=schlag_data["Größe in ha"],
-            )
-
-
-            st.markdown("### Vorschau")
-            st.dataframe(export_df, use_container_width=True)
-
-            """
-            csv = export_df.to_csv(
-                index=False,
-                header=False,
-                sep=";",
-                decimal=",",
-                encoding="utf-8-sig",
-            )
-
-            st.download_button(
-                label="CSV herunterladen",
-                data=csv,
-                file_name=f"{schlag_data['Schlag']}_export.csv",
-                mime="text/csv",
-            )   
-            """
+"""
