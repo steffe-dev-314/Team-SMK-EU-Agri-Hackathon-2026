@@ -1,7 +1,11 @@
 import streamlit as st
 
+
+
+st.logo('.streamlit/logo.png' , size = 'large')
+
 st.set_page_config(
-    page_title="DBE App",
+    page_title="DBE - Startseite",
     page_icon="🌱",
     layout="wide",
 )
