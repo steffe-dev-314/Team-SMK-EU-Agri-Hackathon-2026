@@ -1,0 +1,1917 @@
+{
+    "Gr\u00fcnroggen (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 60.0,
+        "Zwischenfrucht": true
+    },
+    "Winter\u00fcbsen (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 45.0,
+        "Zwischenfrucht": true
+    },
+    "\u00d6lrettich (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 45.0,
+        "Zwischenfrucht": true
+    },
+    "ZF Gemenge winterhart, HVN zul\u00e4ssig (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": true
+    },
+    "Markstammkohl (Futterkohl) (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 55.0,
+        "Zwischenfrucht": true
+    },
+    "Stoppelr\u00fcben (Herbstr\u00fcben) (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 55.0,
+        "Zwischenfrucht": true
+    },
+    "Winterraps (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 45.0,
+        "Zwischenfrucht": true
+    },
+    "ZF Gemenge winterhart, keine HVN (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 35.0,
+        "Zwischenfrucht": true
+    },
+    "Senf (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 45.0,
+        "Zwischenfrucht": true
+    },
+    "Phacelia (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 30.0,
+        "Zwischenfrucht": true
+    },
+    "Sommerraps (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 35.0,
+        "Zwischenfrucht": true
+    },
+    "Rau-/Sandhafer (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": true
+    },
+    "Sommergerste (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 60.0,
+        "Zwischenfrucht": true
+    },
+    "Buchweizen (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 35.0,
+        "Zwischenfrucht": true
+    },
+    "Sonnenblumen (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": true
+    },
+    "Hanf (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 325.0,
+        "Zwischenfrucht": true
+    },
+    "ZF Gemenge nicht winterh., keine HVN (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 35.0,
+        "Zwischenfrucht": true
+    },
+    "Winterwicke (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": true
+    },
+    "Inkarnatklee (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 45.0,
+        "Zwischenfrucht": true
+    },
+    "Wei\u00dfklee (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": true
+    },
+    "Rotklee (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 30.0,
+        "Zwischenfrucht": true
+    },
+    "Schwedenklee (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": true
+    },
+    "ZF Gemenge winterhart, Leguminose (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 35.0,
+        "Zwischenfrucht": true
+    },
+    "Lupine (alle Arten) (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 35.0,
+        "Zwischenfrucht": true
+    },
+    "Saatwicken (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 30.0,
+        "Zwischenfrucht": true
+    },
+    "Perserklee (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 25.0,
+        "Zwischenfrucht": true
+    },
+    "Alexandrinerklee (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": true
+    },
+    "Serradella (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": true
+    },
+    "Felderbse (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 35.0,
+        "Zwischenfrucht": true
+    },
+    "Peluschke (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 35.0,
+        "Zwischenfrucht": true
+    },
+    "Ackerbohne (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 30.0,
+        "Zwischenfrucht": true
+    },
+    "ZF Gemenge nicht winterh., Leguminose (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 35.0,
+        "Zwischenfrucht": true
+    },
+    "Greening-ZF < 50 % Legum. mit Futternutzung in TM (Ausnahme 2018) (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 18.0,
+        "Zwischenfrucht": true
+    },
+    "Winterhartweizen/Durum": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 55.0,
+        "Zwischenfrucht": false
+    },
+    "Sommerhartweizen/Durum": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 55.0,
+        "Zwischenfrucht": false
+    },
+    "Winter-Dinkel": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 70.0,
+        "Zwischenfrucht": false
+    },
+    "Winterweizen, Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Sommerweizen (13 % RP)": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 60.0,
+        "Zwischenfrucht": false
+    },
+    "Sommerweizen (14 % RP)": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 60.0,
+        "Zwischenfrucht": false
+    },
+    "Sommerweizen (15 % RP)": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 60.0,
+        "Zwischenfrucht": false
+    },
+    "Winter-Emmer": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": false
+    },
+    "Winter-Einkorn": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 40.0,
+        "Zwischenfrucht": false
+    },
+    "Sommer-Emmer": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": false
+    },
+    "Sommer-Einkorn": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 40.0,
+        "Zwischenfrucht": false
+    },
+    "Sommer-Dinkel": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 70.0,
+        "Zwischenfrucht": false
+    },
+    "Winterroggen (11 % RP)": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 70.0,
+        "Zwischenfrucht": false
+    },
+    "Winterroggen (12 % RP)": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 70.0,
+        "Zwischenfrucht": false
+    },
+    "Sommerroggen": {
+        "Stickstoffbedarf der Kultur": 150,
+        "Ertrag der Kultur": 55.0,
+        "Zwischenfrucht": false
+    },
+    "Gr\u00fcnschnittroggen": {
+        "Stickstoffbedarf der Kultur": 80,
+        "Ertrag der Kultur": 120.0,
+        "Zwischenfrucht": false
+    },
+    "Gemenge Wintergetreide, Drusch": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 75.0,
+        "Zwischenfrucht": false
+    },
+    "Wintergerste (12 % RP)": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 70.0,
+        "Zwischenfrucht": false
+    },
+    "Wintergerste (13 % RP)": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 70.0,
+        "Zwischenfrucht": false
+    },
+    "Wintergerste, Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Sommergerste (10 % RP)": {
+        "Stickstoffbedarf der Kultur": 120,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": false
+    },
+    "Sommergerste  (11 % RP)": {
+        "Stickstoffbedarf der Kultur": 120,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": false
+    },
+    "Sommergerste (12 % RP)": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": false
+    },
+    "Sommergerste (13 % RP)": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Sommergerste, GPS": {
+        "Stickstoffbedarf der Kultur": 80,
+        "Ertrag der Kultur": 60.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Sommergerste, Drusch": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 35.0,
+        "Zwischenfrucht": false
+    },
+    "Winterhafer": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 55.0,
+        "Zwischenfrucht": false
+    },
+    "Sommerhafer  (11 % RP)": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 55.0,
+        "Zwischenfrucht": false
+    },
+    "Sommerhafer (12 % RP)": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 55.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Hafer, GPS": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "Gemenge Sommergetreide, Drusch": {
+        "Stickstoffbedarf der Kultur": 150,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": false
+    },
+    "Wintertriticale  (12 % RP)": {
+        "Stickstoffbedarf der Kultur": 190,
+        "Ertrag der Kultur": 70.0,
+        "Zwischenfrucht": false
+    },
+    "Wintertriticale (13 % RP)": {
+        "Stickstoffbedarf der Kultur": 190,
+        "Ertrag der Kultur": 70.0,
+        "Zwischenfrucht": false
+    },
+    "Sommertriticale": {
+        "Stickstoffbedarf der Kultur": 150,
+        "Ertrag der Kultur": 60.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Triticale, GPS": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "K\u00f6rnermais (10 % RP)": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 90.0,
+        "Zwischenfrucht": false
+    },
+    "K\u00f6rnermais (11 % RP)": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 90.0,
+        "Zwischenfrucht": false
+    },
+    "CCM-Mais": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 120.0,
+        "Zwischenfrucht": false
+    },
+    "Zuckermais": {
+        "Stickstoffbedarf der Kultur": 160,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Buchweizen": {
+        "Stickstoffbedarf der Kultur": 80,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": false
+    },
+    "Quinoa": {
+        "Stickstoffbedarf der Kultur": 120,
+        "Ertrag der Kultur": 30.0,
+        "Zwischenfrucht": false
+    },
+    "Markerbse (Korn)": {
+        "Stickstoffbedarf der Kultur": 85,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "Gem\u00fcseerbse": {
+        "Stickstoffbedarf der Kultur": 85,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "Futtererbse": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 40.0,
+        "Zwischenfrucht": false
+    },
+    "Futtererbse, Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 250.0,
+        "Zwischenfrucht": false
+    },
+    "Ackerbohne (30 % RP)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 40.0,
+        "Zwischenfrucht": false
+    },
+    "Ackerbohne, Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 250.0,
+        "Zwischenfrucht": false
+    },
+    "Wicke (26 % RP)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 15.0,
+        "Zwischenfrucht": false
+    },
+    "Wicke (Futter), Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Dicke Bohne": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 60.0,
+        "Zwischenfrucht": false
+    },
+    "Flageolet-Bohne": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 65.0,
+        "Zwischenfrucht": false
+    },
+    "Lupine blau": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 30.0,
+        "Zwischenfrucht": false
+    },
+    "Lupine wei\u00df": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 35.0,
+        "Zwischenfrucht": false
+    },
+    "Lupine (Futter), Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 250.0,
+        "Zwischenfrucht": false
+    },
+    "Wintergemenge, Leguminose > 0-30 %, Drusch": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Wintergemenge, Leguminose > 30-75 %, Drusch": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Wintergemenge, Leguminose > 75 %, Drusch": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Sommergemenge, Leguminose > 0-30 %, Drusch": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Sommergemenge, Leguminose > 30-75 %, Drusch": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Sommergemenge, Leguminose > 75 %, Drusch": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Gemenge, Leguminose > 0-30 %, Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Gemenge, Leguminose > 30-75 %, Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Gemenge, Leguminose > 75 %, Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Landsberger Gemenge, Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 60.0,
+        "Zwischenfrucht": false
+    },
+    "Linsen (Speise-Linse)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 15.0,
+        "Zwischenfrucht": false
+    },
+    "Winterraps": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 40.0,
+        "Zwischenfrucht": false
+    },
+    "Sommerraps": {
+        "Stickstoffbedarf der Kultur": 190,
+        "Ertrag der Kultur": 30.0,
+        "Zwischenfrucht": false
+    },
+    "Sonnenblumen": {
+        "Stickstoffbedarf der Kultur": 120,
+        "Ertrag der Kultur": 30.0,
+        "Zwischenfrucht": false
+    },
+    "Sojabohnen": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": false
+    },
+    "Lein (Flachs, Faser), Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 60.0,
+        "Zwischenfrucht": false
+    },
+    "Leindotter": {
+        "Stickstoffbedarf der Kultur": 110,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Mais": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "Silomais (28 % TM)": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Silomais (33 % TM)": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Silomais (35 % TM)": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Gemenge Silomais/Nichtleguminosen (28 % TM), Mais > 50 %": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Gemenge Silomais/Leguminosen (28 % TM), Mais > 50 %": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Gemenge Silomais/Nichtleguminosen (32 % TM), Mais > 50 %": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Gemenge Silomais/Leguminosen (32 % TM), Mais > 50 %": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Gemenge Silomais/Nichtleguminosen (35 % TM), Mais > 50 %": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Gemenge Silomais/Leguminosen (35 % TM), Mais > 50 %": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Gehaltsr\u00fcben": {
+        "Stickstoffbedarf der Kultur": 190,
+        "Ertrag der Kultur": 650.0,
+        "Zwischenfrucht": false
+    },
+    "Massenr\u00fcben": {
+        "Stickstoffbedarf der Kultur": 220,
+        "Ertrag der Kultur": 850.0,
+        "Zwischenfrucht": false
+    },
+    "Kohl-/Steckr\u00fcben (Winter)": {
+        "Stickstoffbedarf der Kultur": 110,
+        "Ertrag der Kultur": 550.0,
+        "Zwischenfrucht": false
+    },
+    "Rotklee": {
+        "Stickstoffbedarf der Kultur": 360,
+        "Ertrag der Kultur": 110.0,
+        "Zwischenfrucht": false
+    },
+    "Klee": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 90.0,
+        "Zwischenfrucht": false
+    },
+    "Kleegras (3-4 Schnitte/Jahr), Gras > 50 %": {
+        "Stickstoffbedarf der Kultur": 350,
+        "Ertrag der Kultur": 120.0,
+        "Zwischenfrucht": false
+    },
+    "Kleegras (3-4 Schnitte/Jahr), Gras < 50 %": {
+        "Stickstoffbedarf der Kultur": 350,
+        "Ertrag der Kultur": 120.0,
+        "Zwischenfrucht": false
+    },
+    "Luzerne": {
+        "Stickstoffbedarf der Kultur": 360,
+        "Ertrag der Kultur": 110.0,
+        "Zwischenfrucht": false
+    },
+    "Ackergras (einj\u00e4hrig)": {
+        "Stickstoffbedarf der Kultur": 110,
+        "Ertrag der Kultur": 40.0,
+        "Zwischenfrucht": false
+    },
+    "Ackergras (einj\u00e4hrig) vor Mais": {
+        "Stickstoffbedarf der Kultur": 125,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": false
+    },
+    "Ackergras (5 Schnitte/Jahr)": {
+        "Stickstoffbedarf der Kultur": 400,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Ackergras (3-4 Schnitte/Jahr)": {
+        "Stickstoffbedarf der Kultur": 310,
+        "Ertrag der Kultur": 120.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Ackergras (1 Schnitt)": {
+        "Stickstoffbedarf der Kultur": 80,
+        "Ertrag der Kultur": 40.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Ackergras (2 Schnitte)": {
+        "Stickstoffbedarf der Kultur": 110,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Ackergras (1 Schnitt, leichter Boden)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 30.0,
+        "Zwischenfrucht": false
+    },
+    "Esparsette": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Serradella": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Luzernegras (3-4 Schnitte/Jahr), Gras > 50 %": {
+        "Stickstoffbedarf der Kultur": 350,
+        "Ertrag der Kultur": 120.0,
+        "Zwischenfrucht": false
+    },
+    "Luzernegras (3-4 Schnitte/Jahr), Gras < 50 %": {
+        "Stickstoffbedarf der Kultur": 350,
+        "Ertrag der Kultur": 120.0,
+        "Zwischenfrucht": false
+    },
+    "DGL 1 Schnittnutzung (8,6 % RP)": {
+        "Stickstoffbedarf der Kultur": 55,
+        "Ertrag der Kultur": 40.0,
+        "Zwischenfrucht": false
+    },
+    "DGL 2 Schnittnutzungen (11,4 % RP)": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 55.0,
+        "Zwischenfrucht": false
+    },
+    "DGL 3 Schnittnutzungen (15,0 % RP)": {
+        "Stickstoffbedarf der Kultur": 190,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "DGL 4 Schnittnutzungen (17,0 % RP)": {
+        "Stickstoffbedarf der Kultur": 245,
+        "Ertrag der Kultur": 90.0,
+        "Zwischenfrucht": false
+    },
+    "DGL 5 Schnittnutzungen (17,5 % RP)": {
+        "Stickstoffbedarf der Kultur": 310,
+        "Ertrag der Kultur": 110.0,
+        "Zwischenfrucht": false
+    },
+    "DGL 6 Schnittnutzungen (18,2 % RP)": {
+        "Stickstoffbedarf der Kultur": 350,
+        "Ertrag der Kultur": 120.0,
+        "Zwischenfrucht": false
+    },
+    "DGL Weide intensiv, 4-5 Mal (18,0 % RP)": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 90.0,
+        "Zwischenfrucht": false
+    },
+    "DGL M\u00e4hweide intensiv, 60 % Weide (17,6 % RP)": {
+        "Stickstoffbedarf der Kultur": 190,
+        "Ertrag der Kultur": 94.0,
+        "Zwischenfrucht": false
+    },
+    "DGL M\u00e4hweide mittel, 20 % Weide (17,2 % RP)": {
+        "Stickstoffbedarf der Kultur": 245,
+        "Ertrag der Kultur": 98.0,
+        "Zwischenfrucht": false
+    },
+    "DGL Weide extensiv, 2-3 Mal (12,5 % RP)": {
+        "Stickstoffbedarf der Kultur": 65,
+        "Ertrag der Kultur": 65.0,
+        "Zwischenfrucht": false
+    },
+    "DGL M\u00e4hweide mittel, 60 % Weide (16,3 % RP)": {
+        "Stickstoffbedarf der Kultur": 148,
+        "Ertrag der Kultur": 81.0,
+        "Zwischenfrucht": false
+    },
+    "DGL M\u00e4hweide extensiv, 20 % Weide (12,4 % RP)": {
+        "Stickstoffbedarf der Kultur": 123,
+        "Ertrag der Kultur": 69.0,
+        "Zwischenfrucht": false
+    },
+    "DGL M\u00e4hweide extensiv, 60 % Weide (12,5 % RP)": {
+        "Stickstoffbedarf der Kultur": 94,
+        "Ertrag der Kultur": 67.0,
+        "Zwischenfrucht": false
+    },
+    "DGL Weide mittel (15,3 % RP)": {
+        "Stickstoffbedarf der Kultur": 95,
+        "Ertrag der Kultur": 78.0,
+        "Zwischenfrucht": false
+    },
+    "Speisekartoffeln": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Veredelungskartoffeln": {
+        "Stickstoffbedarf der Kultur": 220,
+        "Ertrag der Kultur": 500.0,
+        "Zwischenfrucht": false
+    },
+    "Fr\u00fchkartoffeln": {
+        "Stickstoffbedarf der Kultur": 220,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "S\u00fc\u00dfkartoffeln": {
+        "Stickstoffbedarf der Kultur": 125,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Zuckerr\u00fcben": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 650.0,
+        "Zwischenfrucht": false
+    },
+    "Topinambur Knolle": {
+        "Stickstoffbedarf der Kultur": 160,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "Topinambur Kraut": {
+        "Stickstoffbedarf der Kultur": 40,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Blumenkohl": {
+        "Stickstoffbedarf der Kultur": 300,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Brokkoli": {
+        "Stickstoffbedarf der Kultur": 310,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Chinakohl": {
+        "Stickstoffbedarf der Kultur": 210,
+        "Ertrag der Kultur": 700.0,
+        "Zwischenfrucht": false
+    },
+    "Gr\u00fcnkohl": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Kohlrabi": {
+        "Stickstoffbedarf der Kultur": 230,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Rosenkohl": {
+        "Stickstoffbedarf der Kultur": 310,
+        "Ertrag der Kultur": 250.0,
+        "Zwischenfrucht": false
+    },
+    "Rotkohl": {
+        "Stickstoffbedarf der Kultur": 260,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "Wei\u00dfkohl (Frischmarkt)": {
+        "Stickstoffbedarf der Kultur": 260,
+        "Ertrag der Kultur": 700.0,
+        "Zwischenfrucht": false
+    },
+    "Wei\u00dfkohl (Industrie)": {
+        "Stickstoffbedarf der Kultur": 320,
+        "Ertrag der Kultur": 1000.0,
+        "Zwischenfrucht": false
+    },
+    "Wirsing": {
+        "Stickstoffbedarf der Kultur": 285,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Stielmus (R\u00fcbstiel)": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 650.0,
+        "Zwischenfrucht": false
+    },
+    "Mini Pak Choi": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 500.0,
+        "Zwischenfrucht": false
+    },
+    "Spitzkohl": {
+        "Stickstoffbedarf der Kultur": 260,
+        "Ertrag der Kultur": 700.0,
+        "Zwischenfrucht": false
+    },
+    "Pak Choi": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 500.0,
+        "Zwischenfrucht": false
+    },
+    "Brauner Senf (Sareptasenf)": {
+        "Stickstoffbedarf der Kultur": 65,
+        "Ertrag der Kultur": 9.0,
+        "Zwischenfrucht": false
+    },
+    "Rucola Feinware": {
+        "Stickstoffbedarf der Kultur": 150,
+        "Ertrag der Kultur": 175.0,
+        "Zwischenfrucht": false
+    },
+    "Rucola, Grobware": {
+        "Stickstoffbedarf der Kultur": 210,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Radies": {
+        "Stickstoffbedarf der Kultur": 110,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Rettich, Bund": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 500.0,
+        "Zwischenfrucht": false
+    },
+    "Rettich, deutsch": {
+        "Stickstoffbedarf der Kultur": 175,
+        "Ertrag der Kultur": 550.0,
+        "Zwischenfrucht": false
+    },
+    "Rettich, japanisch": {
+        "Stickstoffbedarf der Kultur": 230,
+        "Ertrag der Kultur": 1000.0,
+        "Zwischenfrucht": false
+    },
+    "Wei\u00dfer Senf": {
+        "Stickstoffbedarf der Kultur": 135,
+        "Ertrag der Kultur": 15.0,
+        "Zwischenfrucht": false
+    },
+    "Teltower R\u00fcbchen (Herbstanbau)": {
+        "Stickstoffbedarf der Kultur": 110,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Mair\u00fcben (mit Laub)": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 650.0,
+        "Zwischenfrucht": false
+    },
+    "Gurke, Einleger": {
+        "Stickstoffbedarf der Kultur": 210,
+        "Ertrag der Kultur": 800.0,
+        "Zwischenfrucht": false
+    },
+    "K\u00fcrbis, Hokkaido": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "K\u00fcrbis": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Zucchini": {
+        "Stickstoffbedarf der Kultur": 250,
+        "Ertrag der Kultur": 650.0,
+        "Zwischenfrucht": false
+    },
+    "Porree": {
+        "Stickstoffbedarf der Kultur": 250,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "Schnittlauch, Anbau f\u00fcr Treiberei": {
+        "Stickstoffbedarf der Kultur": 240,
+        "Ertrag der Kultur": 280.0,
+        "Zwischenfrucht": false
+    },
+    "Schnittlauch, ges\u00e4t, bis 1. Schnitt": {
+        "Stickstoffbedarf der Kultur": 210,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Schnittlauch, nach einem Schnitt": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Zwiebel, trocken": {
+        "Stickstoffbedarf der Kultur": 155,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "Zwiebel, Bund-": {
+        "Stickstoffbedarf der Kultur": 210,
+        "Ertrag der Kultur": 680.0,
+        "Zwischenfrucht": false
+    },
+    "Knoblauch (Zehe)": {
+        "Stickstoffbedarf der Kultur": 120,
+        "Ertrag der Kultur": 140.0,
+        "Zwischenfrucht": false
+    },
+    "M\u00f6hre Industrie": {
+        "Stickstoffbedarf der Kultur": 165,
+        "Ertrag der Kultur": 900.0,
+        "Zwischenfrucht": false
+    },
+    "M\u00f6hre, Bund-": {
+        "Stickstoffbedarf der Kultur": 115,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "M\u00f6hre, Wasch-": {
+        "Stickstoffbedarf der Kultur": 125,
+        "Ertrag der Kultur": 700.0,
+        "Zwischenfrucht": false
+    },
+    "Buschbohne": {
+        "Stickstoffbedarf der Kultur": 110,
+        "Ertrag der Kultur": 120.0,
+        "Zwischenfrucht": false
+    },
+    "Stangenbohne Standard": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 250.0,
+        "Zwischenfrucht": false
+    },
+    "Feldsalat": {
+        "Stickstoffbedarf der Kultur": 85,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "Feldsalat, gro\u00dfbl\u00e4ttrig": {
+        "Stickstoffbedarf der Kultur": 110,
+        "Ertrag der Kultur": 130.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Batavia": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 500.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Baby Leaf Lettuce (Salat)": {
+        "Stickstoffbedarf der Kultur": 90,
+        "Ertrag der Kultur": 140.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Blatt-, gr\u00fcn (Lollo, Eichblatt, Krul)": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Blatt-, rot (Lollo, Eichblatt, Krul)": {
+        "Stickstoffbedarf der Kultur": 115,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Eissalat": {
+        "Stickstoffbedarf der Kultur": 175,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Kopfsalat": {
+        "Stickstoffbedarf der Kultur": 150,
+        "Ertrag der Kultur": 500.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Romana": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Romana Herzen": {
+        "Stickstoffbedarf der Kultur": 150,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Versch.": {
+        "Stickstoffbedarf der Kultur": 150,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Spinat (Blatt)": {
+        "Stickstoffbedarf der Kultur": 190,
+        "Ertrag der Kultur": 250.0,
+        "Zwischenfrucht": false
+    },
+    "Spinat (Hack)": {
+        "Stickstoffbedarf der Kultur": 205,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Spinat, \u00dcberwinterung": {
+        "Stickstoffbedarf der Kultur": 270,
+        "Ertrag der Kultur": 250.0,
+        "Zwischenfrucht": false
+    },
+    "Spinat, Blatt, FM Baby": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Rote R\u00fcbe": {
+        "Stickstoffbedarf der Kultur": 250,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "Mangold": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 180.0,
+        "Zwischenfrucht": false
+    },
+    "Sellerie, Bund": {
+        "Stickstoffbedarf der Kultur": 205,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "Sellerie, Knollen": {
+        "Stickstoffbedarf der Kultur": 220,
+        "Ertrag der Kultur": 650.0,
+        "Zwischenfrucht": false
+    },
+    "Sellerie, Stangen": {
+        "Stickstoffbedarf der Kultur": 230,
+        "Ertrag der Kultur": 500.0,
+        "Zwischenfrucht": false
+    },
+    "Ampfer (Wiesen-Sauerampfer)": {
+        "Stickstoffbedarf der Kultur": 90,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Pastinaken": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Chicoreer\u00fcben": {
+        "Stickstoffbedarf der Kultur": 135,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Radicchio": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 280.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Zuckerhut": {
+        "Stickstoffbedarf der Kultur": 190,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Endivien, Frisee": {
+        "Stickstoffbedarf der Kultur": 150,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Salate, Endivien, glattbl\u00e4ttrig": {
+        "Stickstoffbedarf der Kultur": 190,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "Meerrettich (Krautr\u00fcckstand)": {
+        "Stickstoffbedarf der Kultur": 300,
+        "Ertrag der Kultur": 250.0,
+        "Zwischenfrucht": false
+    },
+    "Meerrettich (Stange und Seitenwurzel)": {
+        "Stickstoffbedarf der Kultur": 253,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Schwarzwurzeln": {
+        "Stickstoffbedarf der Kultur": 75,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Knollenfenchel": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Arzneifenchel (Frucht, Droge!)": {
+        "Stickstoffbedarf der Kultur": 120,
+        "Ertrag der Kultur": 25.0,
+        "Zwischenfrucht": false
+    },
+    "Dill, Frischmarkt": {
+        "Stickstoffbedarf der Kultur": 85,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Dill, Industrieware": {
+        "Stickstoffbedarf der Kultur": 105,
+        "Ertrag der Kultur": 250.0,
+        "Zwischenfrucht": false
+    },
+    "Dillspitzen": {
+        "Stickstoffbedarf der Kultur": 85,
+        "Ertrag der Kultur": 75.0,
+        "Zwischenfrucht": false
+    },
+    "Kerbel (auch Wiesenkerbel)": {
+        "Stickstoffbedarf der Kultur": 81,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Bibernelle (kleine, Wurzel)": {
+        "Stickstoffbedarf der Kultur": 157,
+        "Ertrag der Kultur": 70.0,
+        "Zwischenfrucht": false
+    },
+    "K\u00fcmmel (Frucht; Droge!)": {
+        "Stickstoffbedarf der Kultur": 108,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": false
+    },
+    "Schwarzk\u00fcmmel": {
+        "Stickstoffbedarf der Kultur": 110,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": false
+    },
+    "Koriander": {
+        "Stickstoffbedarf der Kultur": 89,
+        "Ertrag der Kultur": 120.0,
+        "Zwischenfrucht": false
+    },
+    "Liebst\u00f6ckel/Maggikraut": {
+        "Stickstoffbedarf der Kultur": 244,
+        "Ertrag der Kultur": 550.0,
+        "Zwischenfrucht": false
+    },
+    "Petersilie (Blatt), ges\u00e4t, bis 1. Schnitt": {
+        "Stickstoffbedarf der Kultur": 160,
+        "Ertrag der Kultur": 240.0,
+        "Zwischenfrucht": false
+    },
+    "Petersilie (Blatt), nach einem Schnitt": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 160.0,
+        "Zwischenfrucht": false
+    },
+    "Petersilie (Wurzel)": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Rosmarin": {
+        "Stickstoffbedarf der Kultur": 90,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "Salbei (nicht bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 212,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Muskateller Salbei (bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 112,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Dost, Oregano (bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 120.0,
+        "Zwischenfrucht": false
+    },
+    "Majoran (Kraut bei Bl\u00fchbeginn)": {
+        "Stickstoffbedarf der Kultur": 136,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Bohnenkraut (einj\u00e4hrig; Bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 184,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Hyssopus (Ysop/Eisenkraut)": {
+        "Stickstoffbedarf der Kultur": 103,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Verbenen (Echtes Eisenkraut)": {
+        "Stickstoffbedarf der Kultur": 280,
+        "Ertrag der Kultur": 500.0,
+        "Zwischenfrucht": false
+    },
+    "Lavendel": {
+        "Stickstoffbedarf der Kultur": 91,
+        "Ertrag der Kultur": 25.0,
+        "Zwischenfrucht": false
+    },
+    "Zitronenmelisse (nicht bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 187,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Enziane": {
+        "Stickstoffbedarf der Kultur": 80,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Ringelblume (bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 214,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "Ringelblume (Bl\u00fcte)": {
+        "Stickstoffbedarf der Kultur": 186,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": false
+    },
+    "Sonnenhut (Ech. Angustifolid; bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 75,
+        "Ertrag der Kultur": 50.0,
+        "Zwischenfrucht": false
+    },
+    "Sonnenhut (Ech. Angustifolid; Wurzel)": {
+        "Stickstoffbedarf der Kultur": 85,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": false
+    },
+    "Sonnenhut (Ech. Pallida; bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 169,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Sonnenhut (Ech. Pallida; Wurzel)": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Sonnenhut (roter; bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 215,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Sonnenhut (roter; Wurzel)": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Kamille (Kraut ohne Bl\u00fcte)": {
+        "Stickstoffbedarf der Kultur": 95,
+        "Ertrag der Kultur": 60.0,
+        "Zwischenfrucht": false
+    },
+    "Kamille (Bl\u00fcte)": {
+        "Stickstoffbedarf der Kultur": 52,
+        "Ertrag der Kultur": 40.0,
+        "Zwischenfrucht": false
+    },
+    "Baldrian (Wurzel)": {
+        "Stickstoffbedarf der Kultur": 120,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Frauenmantel": {
+        "Stickstoffbedarf der Kultur": 127,
+        "Ertrag der Kultur": 230.0,
+        "Zwischenfrucht": false
+    },
+    "Mariendisteln": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 15.0,
+        "Zwischenfrucht": false
+    },
+    "Galega (Gei\u00dfraute)": {
+        "Stickstoffbedarf der Kultur": 131,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "L\u00f6wenzahn": {
+        "Stickstoffbedarf der Kultur": 106,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Engelwurz (Wurzel)": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Malve (blau; bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 215,
+        "Ertrag der Kultur": 500.0,
+        "Zwischenfrucht": false
+    },
+    "Malve (blau; Bl\u00fcte)": {
+        "Stickstoffbedarf der Kultur": 234,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Eibisch (Wurzel)": {
+        "Stickstoffbedarf der Kultur": 141,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Hanf (\u00d6l, K\u00f6rner)": {
+        "Stickstoffbedarf der Kultur": 160,
+        "Ertrag der Kultur": 12.0,
+        "Zwischenfrucht": false
+    },
+    "Hanf (Faser), Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 160,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "Kenaf": {
+        "Stickstoffbedarf der Kultur": 185,
+        "Ertrag der Kultur": 250.0,
+        "Zwischenfrucht": false
+    },
+    "Mohn (Schlafmohn, Backmohn)": {
+        "Stickstoffbedarf der Kultur": 78,
+        "Ertrag der Kultur": 25.0,
+        "Zwischenfrucht": false
+    },
+    "Erdbeeren, Pflanzung": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 0.0,
+        "Zwischenfrucht": false
+    },
+    "Erdbeeren, Fr\u00fchjahr": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 140.0,
+        "Zwischenfrucht": false
+    },
+    "Erdbeeren, nach Ernte": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 140.0,
+        "Zwischenfrucht": false
+    },
+    "Erdbeeren, fertigiert": {
+        "Stickstoffbedarf der Kultur": 120,
+        "Ertrag der Kultur": 220.0,
+        "Zwischenfrucht": false
+    },
+    "Erdbeeren, remontierend": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Erdbeeren, Terminkultur einmalige Ernte": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Erdbeerpflanzenvermehrung": {
+        "Stickstoffbedarf der Kultur": 210,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Sudangras, GPS": {
+        "Stickstoffbedarf der Kultur": 143,
+        "Ertrag der Kultur": 250.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Hirse, GPS": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Zuckerhirse (Sorghum), Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 200,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Rhabarber 1. Standjahr (Austrieb)": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 0.0,
+        "Zwischenfrucht": false
+    },
+    "Rhabarber 2. Standjahr (Austrieb)": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Rhabarber 3. Standjahr (Austrieb)": {
+        "Stickstoffbedarf der Kultur": 120,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Rhabarber ab 4. Standjahr (Austrieb)": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Rhabarber 2. Standjahr nach Ernte": {
+        "Stickstoffbedarf der Kultur": 150,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Rhabarber 3. Standjahr nach Ernte": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Rhabarber 4. Standjahr nach Ernte": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Chinaschilf/Miscanthus": {
+        "Stickstoffbedarf der Kultur": 120,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Riesenweizengras/Szarvasi-Gras": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Spargel 1. Standjahr": {
+        "Stickstoffbedarf der Kultur": 140,
+        "Ertrag der Kultur": 0.0,
+        "Zwischenfrucht": false
+    },
+    "Spargel 2. Standjahr": {
+        "Stickstoffbedarf der Kultur": 160,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": false
+    },
+    "Spargel 3. Standjahr": {
+        "Stickstoffbedarf der Kultur": 160,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "Spargel ab 4. Standjahr": {
+        "Stickstoffbedarf der Kultur": 80,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Spargel Jungpflanzenproduktion": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 440.0,
+        "Zwischenfrucht": false
+    },
+    "Artischocke": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 160.0,
+        "Zwischenfrucht": false
+    },
+    "Winterweizen C": {
+        "Stickstoffbedarf der Kultur": 210,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "Winterweizen A,B": {
+        "Stickstoffbedarf der Kultur": 230,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "Winterweizen E": {
+        "Stickstoffbedarf der Kultur": 260,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "Wassermelone": {
+        "Stickstoffbedarf der Kultur": 145,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "\u00d6lk\u00fcrbis": {
+        "Stickstoffbedarf der Kultur": 70,
+        "Ertrag der Kultur": 7.0,
+        "Zwischenfrucht": false
+    },
+    "Petersilie, \u00dcberwinterung": {
+        "Stickstoffbedarf der Kultur": 150,
+        "Ertrag der Kultur": 240.0,
+        "Zwischenfrucht": false
+    },
+    "Grassamenvermehrung": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 10.0,
+        "Zwischenfrucht": false
+    },
+    "Grassamenvermehrung (Ansaat vor 01.08., mit Futternutzung)": {
+        "Stickstoffbedarf der Kultur": 80,
+        "Ertrag der Kultur": 25.0,
+        "Zwischenfrucht": false
+    },
+    "Klee-/Luzernesamenvermehrung": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 10.0,
+        "Zwischenfrucht": false
+    },
+    "Rhabarber 1. Standjahr + Wurzelspeicher": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 0.0001,
+        "Zwischenfrucht": false
+    },
+    "Rhabarber 2. Standjahr + Wurzelspeicher": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 0.0001,
+        "Zwischenfrucht": false
+    },
+    "Rhabarber 3. Standjahr + Wurzelspeicher": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 0.0001,
+        "Zwischenfrucht": false
+    },
+    "Spargel 1. Standjahr + Wurzelspeicher": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 0.0001,
+        "Zwischenfrucht": false
+    },
+    "Spargel 2. Standjahr + Wurzelspeicher": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 0.0001,
+        "Zwischenfrucht": false
+    },
+    "Spargel 3. Standjahr + Wurzelspeicher": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 0.0001,
+        "Zwischenfrucht": false
+    },
+    "Erdbeeren, Pflanzung + Wurzelspeicher": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 0.0001,
+        "Zwischenfrucht": false
+    },
+    "Blumenkohl, \u00dcberwinterung": {
+        "Stickstoffbedarf der Kultur": 300,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Porree, \u00dcberwinterung": {
+        "Stickstoffbedarf der Kultur": 250,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "Spitzkohl, \u00dcberwinterung": {
+        "Stickstoffbedarf der Kultur": 260,
+        "Ertrag der Kultur": 700.0,
+        "Zwischenfrucht": false
+    },
+    "Winterroggen, Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 170,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Wintergerste (10 % RP)": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 70.0,
+        "Zwischenfrucht": false
+    },
+    "Wintergerste (11 % RP)": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 70.0,
+        "Zwischenfrucht": false
+    },
+    "Wintertriticale, Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 190,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Lein (\u00d6l, Leinsamen)": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": false
+    },
+    "Steinklee (gelber; bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 90,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Iberischer Drachenkopf (bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 166,
+        "Ertrag der Kultur": 210.0,
+        "Zwischenfrucht": false
+    },
+    "Basilikum (Kraut bei Bl\u00fchbeginn)": {
+        "Stickstoffbedarf der Kultur": 90,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Borretsch (bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 145,
+        "Ertrag der Kultur": 700.0,
+        "Zwischenfrucht": false
+    },
+    "Thymian (bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 106,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Pfefferminze (nicht bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 208,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Spitzwegerich (Kraut)": {
+        "Stickstoffbedarf der Kultur": 106,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Schafgarbe (Bl\u00fchhorizont)": {
+        "Stickstoffbedarf der Kultur": 181,
+        "Ertrag der Kultur": 350.0,
+        "Zwischenfrucht": false
+    },
+    "Johanniskraut (bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 146,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Silphium (Durchwachs., Becher), Ganzpflanze": {
+        "Stickstoffbedarf der Kultur": 160,
+        "Ertrag der Kultur": 450.0,
+        "Zwischenfrucht": false
+    },
+    "Kleegras, Gras > 50 % (vereinfachte DBE)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Ackergras (einj\u00e4hrig) (vereinfachte DBE)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Luzernegras, Gras > 50 % (vereinfachte DBE)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "ZF Gemenge winterhart, Leguminose 0-50 % (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": true
+    },
+    "ZF Gemenge abfrierend, Leguminose 0-50 % (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": true
+    },
+    "ZF Gemenge winterhart, Leguminose > 50-75 % (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": true
+    },
+    "ZF Gemenge abfrierend, Leguminose > 50-75 % (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": true
+    },
+    "ZF Gemenge winterhart, Leguminose > 75 % (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": true
+    },
+    "ZF Gemenge abfrierend, Leguminose > 75 % (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 0,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": true
+    },
+    "Tagetes Nematodenbek\u00e4mpfung (Zwischenfrucht)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 0.0,
+        "Zwischenfrucht": true
+    },
+    "Sudangras, Zuckerhirse": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Portulak, bis 1. Schnitt": {
+        "Stickstoffbedarf der Kultur": 90,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Portulak, nach einem Schnitt": {
+        "Stickstoffbedarf der Kultur": 70,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Petersilie (Blatthorizont), ges\u00e4t, bis 1. Schnitt": {
+        "Stickstoffbedarf der Kultur": 160,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Petersilie (Blatthorizont), nach einem Schnitt": {
+        "Stickstoffbedarf der Kultur": 160,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Ackergras (Beweidung)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 40.0,
+        "Zwischenfrucht": false
+    },
+    "Zwiebel, trocken, mit Untersaat": {
+        "Stickstoffbedarf der Kultur": 175,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Winterhanf": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 25.0,
+        "Zwischenfrucht": false
+    },
+    "Gr\u00fcnkohl (Blatt), Handernte": {
+        "Stickstoffbedarf der Kultur": 175,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Raps": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 35.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Stoppelr\u00fcben": {
+        "Stickstoffbedarf der Kultur": 145,
+        "Ertrag der Kultur": 55.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Gemenge Leguminose/Nichtleguminose": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 80.0,
+        "Zwischenfrucht": false
+    },
+    "Knoblauch, \u00dcberwinterung": {
+        "Stickstoffbedarf der Kultur": 120,
+        "Ertrag der Kultur": 140.0,
+        "Zwischenfrucht": false
+    },
+    "Zwiebel, Bund-, \u00dcberwinterung": {
+        "Stickstoffbedarf der Kultur": 210,
+        "Ertrag der Kultur": 680.0,
+        "Zwischenfrucht": false
+    },
+    "Zwiebel, trocken, \u00dcberwinterung": {
+        "Stickstoffbedarf der Kultur": 155,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    },
+    "Grassamenvermehrung (vereinfachte DBE)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Grassamenvermehrung (1 Schnitt)": {
+        "Stickstoffbedarf der Kultur": 80,
+        "Ertrag der Kultur": 40.0,
+        "Zwischenfrucht": false
+    },
+    "2. Hauptkultur Grassamenvermehrung (Beweidung)": {
+        "Stickstoffbedarf der Kultur": 60,
+        "Ertrag der Kultur": 40.0,
+        "Zwischenfrucht": false
+    },
+    "Grassamenvermehrung (3-4 Schnitte/Jahr)": {
+        "Stickstoffbedarf der Kultur": 310,
+        "Ertrag der Kultur": 120.0,
+        "Zwischenfrucht": false
+    },
+    "Grassamenvermehrung (5 Schnitte/Jahr)": {
+        "Stickstoffbedarf der Kultur": 400,
+        "Ertrag der Kultur": 150.0,
+        "Zwischenfrucht": false
+    },
+    "Saflor, Samen (F\u00e4rberdistel)": {
+        "Stickstoffbedarf der Kultur": 90,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": false
+    },
+    "DGL M\u00e4hweide intensiv, 20 % Weide (17,5 % RP)": {
+        "Stickstoffbedarf der Kultur": 277,
+        "Ertrag der Kultur": 110.0,
+        "Zwischenfrucht": false
+    },
+    "Zwiebel, Schalotte": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 250.0,
+        "Zwischenfrucht": false
+    },
+    "Iberischer Drachenkopf (Samen)": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 20.0,
+        "Zwischenfrucht": false
+    },
+    "Kapuzinerkressen (bl\u00fchendes Kraut)": {
+        "Stickstoffbedarf der Kultur": 135,
+        "Ertrag der Kultur": 185.0,
+        "Zwischenfrucht": false
+    },
+    "Pimpinelle, Kleiner Wiesenknopf": {
+        "Stickstoffbedarf der Kultur": 81,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Petersilie (Blatt), gepflanzt, bis 1. Schnitt": {
+        "Stickstoffbedarf der Kultur": 210,
+        "Ertrag der Kultur": 240.0,
+        "Zwischenfrucht": false
+    },
+    "Petersilie (Blatthorizont), gepflanzt, bis 1. Schnitt": {
+        "Stickstoffbedarf der Kultur": 210,
+        "Ertrag der Kultur": 100.0,
+        "Zwischenfrucht": false
+    },
+    "Schnittlauch, gepflanzt, bis 1. Schnitt": {
+        "Stickstoffbedarf der Kultur": 210,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Tomaten, Freiland": {
+        "Stickstoffbedarf der Kultur": 225,
+        "Ertrag der Kultur": 530.0,
+        "Zwischenfrucht": false
+    },
+    "Paprika": {
+        "Stickstoffbedarf der Kultur": 250,
+        "Ertrag der Kultur": 500.0,
+        "Zwischenfrucht": false
+    },
+    "Mangold (Blatt), eine Ernte": {
+        "Stickstoffbedarf der Kultur": 180,
+        "Ertrag der Kultur": 400.0,
+        "Zwischenfrucht": false
+    },
+    "Mangold (Blatt), Folgeernte": {
+        "Stickstoffbedarf der Kultur": 120,
+        "Ertrag der Kultur": 320.0,
+        "Zwischenfrucht": false
+    },
+    "Mangold (Stiel), eine Ernte": {
+        "Stickstoffbedarf der Kultur": 190,
+        "Ertrag der Kultur": 550.0,
+        "Zwischenfrucht": false
+    },
+    "Mangold (Stiel), Folgeernte": {
+        "Stickstoffbedarf der Kultur": 90,
+        "Ertrag der Kultur": 300.0,
+        "Zwischenfrucht": false
+    },
+    "Edamame": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 180.0,
+        "Zwischenfrucht": false
+    },
+    "Grassamenvermehrung (Drusch)": {
+        "Stickstoffbedarf der Kultur": 150,
+        "Ertrag der Kultur": 15.0,
+        "Zwischenfrucht": false
+    },
+    "Wildpflanzenmischung (z.B. AUM-Ma\u00dfnahme), Ansaatjahr": {
+        "Stickstoffbedarf der Kultur": 100,
+        "Ertrag der Kultur": 255.0,
+        "Zwischenfrucht": false
+    },
+    "Wildpflanzenmischung (z.B. AUM-Ma\u00dfnahme), ab 2. Standjahr": {
+        "Stickstoffbedarf der Kultur": 130,
+        "Ertrag der Kultur": 375.0,
+        "Zwischenfrucht": false
+    },
+    "Zuckermelone": {
+        "Stickstoffbedarf der Kultur": 145,
+        "Ertrag der Kultur": 200.0,
+        "Zwischenfrucht": false
+    },
+    "Gem\u00fcse-/Steckr\u00fcbe": {
+        "Stickstoffbedarf der Kultur": 110,
+        "Ertrag der Kultur": 550.0,
+        "Zwischenfrucht": false
+    },
+    "Zwiebel, trocken, Steck-": {
+        "Stickstoffbedarf der Kultur": 155,
+        "Ertrag der Kultur": 600.0,
+        "Zwischenfrucht": false
+    }
+}
