@@ -221,3 +221,5 @@ __marimo__/
 .streamlit/secrets.toml
 data_exploration.py
 schlaege_vorlage.csv
+pages/secret.py
+pages/secret_short.py

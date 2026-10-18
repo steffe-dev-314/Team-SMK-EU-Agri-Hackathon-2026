@@ -2,78 +2,78 @@ import streamlit as st
 
 st.set_page_config(page_title="FAQ", layout="wide")
 
-st.logo('.streamlit/logo.png' , size = 'large')
+st.logo(".streamlit/logo.png", size="large")
 
-st.title("Häufig gestellte Fragen (FAQ) – SMK Düngebedarfsermittlung (DBE)")
+st.title("Frequently Asked Questions (FAQ) – SMK Fertilizer Requirement Assessment (DBE)")
 
-# 1. Rechtliche Grundlagen & Praxis der DBE
+# 1. Legal Framework and Practical Aspects of the DBE
 
-st.header("1. Rechtliche Grundlagen & Praxis der Düngebedarfsermittlung (DBE)")
+st.header("1. Legal Framework and Practical Aspects of the Fertilizer Requirement Assessment (DBE)")
 
-with st.expander("Was ist die Düngebedarfsermittlung (DBE) überhaupt und warum muss ich sie machen?"):
+with st.expander("What is the fertilizer requirement assessment (DBE), and why do I need to carry it out?"):
     st.markdown("""
-    Die Düngebedarfsermittlung ist die gesetzlich vorgeschriebene Kalkulation, wie viel Stickstoff-Düngebedarf deine Kulturen auf einem bestimmten Acker tatsächlich haben. Bevor du mit der Düngung startest, musst du diesen Bedarf verbindlich ermitteln und dokumentieren, um die gesetzlichen Vorgaben (Compliance) zu erfüllen.
+    The fertilizer requirement assessment is the legally required calculation of how much nitrogen fertilizer your crops actually need on a particular field. Before you begin fertilizing, you must determine and document this requirement to comply with the applicable legal regulations.
     """)
 
-with st.expander("Muss ich die Berechnung für meinen gesamten Hof auf einmal oder für jedes Feld einzeln machen?"):
+with st.expander("Do I need to calculate fertilizer requirements for my entire farm at once, or separately for each field?"):
     st.markdown("""
-    Du musst die DBE für jeden Schlag bzw. jede Bewirtschaftungseinheit einzeln erstellen. Jedes Feld hat eine eigene Flächengröße, andere Vorjahreskulturen, spezifische Bodenanalysen und unterschiedliche Ertragsdurchschnitte.
+    You must prepare a DBE separately for each field or management unit. Each field has its own area, previous-year crops, specific soil analysis results, and different average yields.
     """)
 
-with st.expander("Welche Daten brauche ich konkret, um eine DBE für einen Schlag auszufüllen?"):
+with st.expander("What specific information do I need to complete a DBE for a field?"):
     st.markdown("""
-    Viele dieser Informationen liegen auf deinem Betrieb bereits vor, zum Beispiel in Form von Bodenanalysen. Für eine vollständige Stickstoff-Düngebedarfsermittlung (wie nach den Vorgaben der Landwirtschaftskammer Nordrhein-Westfalen) benötigst du folgende Angaben:
+    Much of this information may already be available on your farm, for example in the form of soil analyses. To complete a nitrogen fertilizer requirement assessment, such as one based on the requirements of the North Rhine-Westphalia Chamber of Agriculture, you need the following information:
 
-    - **Flächendaten:** Den Namen des Schlags bzw. der Bewirtschaftungseinheit, die Feldblocknummer sowie die Schlaggröße in Hektar.
-    - **Kultur & Fruchtfolge:** Die geplante Hauptkultur (z. B. Winterweizen), die Vorjahreskultur sowie eventuelle Zwischenfrüchte.
-    - **Ertragsniveau:** Deinen durchschnittlichen Betriebsertrag der letzten fünf Jahre im Vergleich zum Ertrag laut Düngeverordnung (DüV), um Zu- oder Abschläge bei der Ertragsdifferenz zu berechnen.
-    - **Bodenwerte:** Ergebnisse deiner Bodenanalysen sowie Angaben zu Standort und Humus für die entsprechenden Abschläge.
-    - **Nachlieferung aus dem Vorjahr:** Angaben zur organischen Düngung aus dem Vorjahr, da hierfür ein Abschlag angerechnet wird.
+    - **Field information:** The name of the field or management unit, the field block number, and the field area in hectares.
+    - **Crop and crop rotation:** The planned main crop (e.g. winter wheat), the previous year's crop, and any catch crops.
+    - **Yield level:** Your farm's average yield over the past five years compared with the yield specified in the German Fertilizer Ordinance (DüV), in order to calculate any additions or deductions based on the yield difference.
+    - **Soil values:** Soil analysis results, as well as information about the location and humus content, where relevant for the applicable deductions.
+    - **Nutrient carryover from the previous year:** Information about organic fertilizer applications in the previous year, as a corresponding deduction must be taken into account.
     """)
 
-with st.expander("Was ist der Unterschied zwischen der Düngebedarfsermittlung (DBE) und der Düngedokumentation?"):
+with st.expander("What is the difference between the fertilizer requirement assessment (DBE) and fertilization records?"):
     st.markdown("""
-    - **Vor der Düngung (Bedarfsermittlung):** Hier berechnest du über den Stickstoff-Bedarfswert sowie die gesetzlichen Zu- und Abschläge deinen maximal zulässigen Stickstoff-Düngebedarf in Kilogramm pro Hektar.
-    - **Nach der Düngung (Dokumentation):** Sobald du gedüngt hast, trägst du in die Dokumentation der Stickstoffdüngung das genaue Datum, das verwendete Düngemittel (z. B. Milchviehgülle), die ausgebrachte Menge sowie die aufgebrachte Stickstoffmenge pro Hektar und Fläche ein.
+    - **Before fertilizing (requirement assessment):** You calculate the maximum permitted nitrogen fertilizer requirement in kilograms per hectare, based on the nitrogen requirement value and the legally prescribed additions and deductions.
+    - **After fertilizing (documentation):** Once you have applied fertilizer, you record the exact date, the fertilizer used (e.g. dairy cattle slurry), the quantity applied, and the amount of nitrogen applied per hectare and across the field.
     """)
 
-# 2. Arbeiten mit dem SMK DBE-Rechner
+# 2. Using the SMK DBE Calculator
 
-st.header("2. Arbeiten mit dem SMK DBE-Rechner im Hofalltag")
+st.header("2. Using the SMK DBE Calculator in Everyday Farm Operations")
 
-with st.expander("Warum sollte ich von Zettel und Stift oder einer Excel-Tabelle auf SMK wechseln?"):
+with st.expander("Why should I switch from pen and paper or Excel spreadsheets to SMK?"):
     st.markdown("""
-    Aktuell nutzen bei der Dokumentation noch 51 % der Betriebe Papier und 57 % greifen auf Tabellenkalkulationen (Spreadsheets) oder gescannte Dokumente zurück. Das führt zu manuellen Prozessen, doppelten Formularen und verlorener Zeit, die für die eigentliche Landwirtschaft fehlt. Mit SMK hast du einen durchgehenden Workflow: Du erfasst deine Hofdaten nur ein einziges Mal, kannst sie wiederverwenden und dir das Dokument ausgeben lassen.
+    Currently, 51% of farms still use paper for documentation, while 57% rely on spreadsheets or scanned documents. This results in manual processes, duplicate forms, and wasted time that could otherwise be spent on farming. SMK provides an integrated workflow: you enter your farm data just once, reuse it when needed, and generate the required documentation.
     """)
 
-with st.expander("Ich bin kein IT-Profi – ist das Programm kompliziert zu bedienen?"):
+with st.expander("I'm not an IT expert—is the program difficult to use?"):
     st.markdown("""
-    Nein. Viele Landwirte wünschen sich eine unkomplizierte Anwendung ohne hohe Einstiegshürden. Unsere Plattform bündelt deine gesamte Dünge-Dokumentation auf einem einzigen, intuitiven Dashboard. So sparst du dir das Geld für teure externe Beratungsdienste, auf die derzeit 78 % der Betriebe zurückgreifen.
+    No. Many farmers want a straightforward application without a steep learning curve. Our platform brings your fertilizer documentation together in a single, intuitive dashboard. This can also help you save on expensive external consulting services, which 78% of farms currently rely on.
     """)
 
-with st.expander("Kann ich meine bestehenden Hofdaten weiterverwenden?"):
+with st.expander("Can I reuse my existing farm data?"):
     st.markdown("""
-    Ja. Viele Höfe leiden heute unter getrennten Systemen, die nicht miteinander kommunizieren. Unser Ansatz setzt auf eine gemeinsame Plattform für all deine Daten sowie auf Interoperabilität mit bestehenden Open-Source-Plattformen, damit vorhandene Informationen wie Bodenanalysen direkt genutzt werden können.
+    Yes. Many farms currently use separate systems that do not communicate with one another. Our approach is based on a shared platform for all your data, together with interoperability with existing open-source platforms, so that information you already have, such as soil analysis results, can be used directly.
     """)
 
-# 3. Kosten, Datenschutz & Open Source
+# 3. Costs, Data Protection, and Open Source
 
-st.header("3. Kosten, Datenschutz & Open Source")
+st.header("3. Costs, Data Protection, and Open Source")
 
-with st.expander("Was kostet mich der DBE-Rechner von SMK? Gibt es versteckte Abo-Fallen?"):
+with st.expander("How much does the SMK DBE calculator cost? Are there any hidden subscription fees?"):
     st.markdown("""
-    Die Software ist komplett kostenlos und frei von teuren Lizenzgebühren. Wir sind überzeugt, dass die Digitalisierung in der Landwirtschaft kein hohes Preisschild haben darf und dich nicht in die Abhängigkeit eines einzelnen Anbieters („Vendor Lock-in“) treiben sollte. Um das Werkzeug für Landwirte dauerhaft kostenfrei zu halten, setzen wir zur Finanzierung auf Förderprogramme (wie NOSTRADAMUS oder das BMDS-Förderprogramm) sowie auf begleitende Schulungen und Workshops.
+    The software is completely free and has no expensive license fees. We believe that digitalization in agriculture should not come with a high price tag or make you dependent on a single provider (vendor lock-in). To keep the tool permanently free for farmers, we rely on funding programs, such as NOSTRADAMUS or the BMDS funding program, as well as accompanying training sessions and workshops.
     """)
 
-with st.expander("Was bedeutet „Open Source“ für mich als Landwirt?"):
+with st.expander("What does 'open source' mean for me as a farmer?"):
     st.markdown("""
-    Open Source bedeutet, dass der Quellcode unserer Software öffentlich einsehbar ist. Das bietet dir zwei zentrale Vorteile:
+    Open source means that the source code of our software is publicly available for inspection. This offers two key advantages:
 
-    - **Anpassbarkeit:** Der öffentliche Quellcode lässt sich flexibel an individuelle Bedürfnisse anpassen.
-    - **Unabhängigkeit:** Du erhältst ein wirkungsvolles Werkzeug ohne hohe Softwarekosten oder Herstellerbindung.
+    - **Adaptability:** The publicly available source code can be modified to meet individual requirements.
+    - **Independence:** You get a powerful tool without high software costs or dependence on a particular vendor.
     """)
 
-with st.expander("Was passiert mit meinen sensiblen Hof- und Bodendaten?"):
+with st.expander("What happens to my sensitive farm and soil data?"):
     st.markdown("""
-    Uns ist bewusst, dass viele Landwirte große Bedenken hinsichtlich der Datensicherheit haben und ihre Betriebsdaten privat halten möchten. Unsere Lösung richtet sich nach den Zielen der EU und stellt deine digitale Souveränität in den Mittelpunkt. Dank des offenen Quellcodes ist jederzeit transparent nachvollziehbar, wie deine Daten verarbeitet werden.
+    We understand that many farmers have serious concerns about data security and want to keep their farm data private. Our solution aligns with EU objectives and puts your digital sovereignty at the center. Because the source code is open, how your data is processed can be transparently inspected.
     """)

@@ -1,28 +1,30 @@
-
 import streamlit as st
 from form_to_csv import build_dbe_excel, get_finished_parcels
 from datetime import datetime
 
 
-st.markdown("## Zusammenfassung und Export")
+st.markdown("## Summary and Export")
 
-if not "schlag_collection" in st.session_state or not st.session_state.schlag_collection:
-    st.info("Bitte zunächst Schläge eintragen.")
+if (
+    "schlag_collection" not in st.session_state
+    or not st.session_state.schlag_collection
+):
+    st.info("Please add parcels first.")
 
 else:
     if not get_finished_parcels(st.session_state.schlag_collection):
         st.error(
-            "Der Excel-Bericht kann nicht erstellt werden: "
-            "Für keinen Schlag liegen sowohl eine berechnete DBE "
-            "als auch eine Düngedokumentation vor. "
-            "Bitte vervollständige zunächst die DBE und erfasse "
-            "die zugehörigen Düngungsdaten."
+            "The Excel report cannot be generated: "
+            "No parcel has both a completed nitrogen requirement "
+            "calculation and fertilization records. "
+            "Please complete the nitrogen requirement calculation "
+            "and enter the corresponding fertilization data first."
         )
 
     else:
         st.markdown(
-            "Erstelle einen formatierten Excel-Bericht "
-            "mit DBE-Ergebnissen und Berechnungsdetails."
+            "Generate a formatted Excel report "
+            "containing nitrogen requirement results and calculation details."
         )
 
         finished_parcels = get_finished_parcels(
@@ -30,10 +32,10 @@ else:
         )
 
         metadata = [
-            ("Betrieb", st.session_state.farm_metadata.get("betrieb", "")),
-            ("Betriebsnummer", st.session_state.farm_metadata.get("betriebsnr", "")),
-            ("Düngejahr", st.session_state.farm_metadata.get("duengejahr", "")),
-            ("Erstellt am", datetime.now()),
+            ("Farm Name", st.session_state.farm_metadata.get("betrieb", "")),
+            ("Farm Registration Number", st.session_state.farm_metadata.get("betriebsnr", "")),
+            ("Fertilization Year", st.session_state.farm_metadata.get("duengejahr", "")),
+            ("Generated On", datetime.now()),
         ]
 
         if len(finished_parcels) != len(st.session_state.schlag_collection):
@@ -43,17 +45,17 @@ else:
             )
 
             st.warning(
-                f"Der Excel-Bericht enthält nur "
-                f"{len(finished_parcels)} von "
+                f"The Excel report includes only "
+                f"{len(finished_parcels)} of "
                 f"{len(st.session_state.schlag_collection)} "
-                f"erfassten Schlägen. "
+                f"registered parcels. "
                 f"{omitted_count} "
-                f"{'Schlag wird' if omitted_count == 1 else 'Schläge werden'} "
-                "nicht berücksichtigt, da dafür noch keine vollständige "
-                "DBE und Düngedokumentation vorliegt."
+                f"{'parcel has' if omitted_count == 1 else 'parcels have'} "
+                "been excluded because the required nitrogen requirement "
+                "calculation and fertilization records are not yet complete."
             )
 
-            st.info("Excel wird nur für folgende Schläge erstellt:")
+            st.info("The Excel report will be generated only for the following parcels:")
 
             for p in finished_parcels:
                 st.info(
@@ -73,10 +75,10 @@ else:
         )
 
         st.download_button(
-            label="Excel-Bericht herunterladen",
+            label="Download Excel Report",
             data=excel_data,
             file_name=(
-                f"DBE_Bericht_"
+                f"DBE_Report_"
                 f"{datetime.now():%Y%m%d_%H%M}.xlsx"
             ),
             mime=(

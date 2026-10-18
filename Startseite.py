@@ -1,20 +1,18 @@
 import streamlit as st
 
-
-
-st.logo('.streamlit/logo.png' , size = 'large')
-
 st.set_page_config(
-    page_title="SMK - Startseite",
+    page_title="SMK - Home",
     page_icon="🌱",
     layout="wide",
 )
 
-st.title("SMK - Startseite")
-st.write("Willkommen zum Farmer-friendly dashboard von SMK!.")
+st.logo(".streamlit/logo.png", size="large")
+
+st.title("SMK - Home")
+st.write("Welcome to SMK's farmer-friendly dashboard!")
 
 st.info(
-    "Wähle eine Seite in der Navigation links, "
-    "um die Angaben zum Schlag, die Düngebedarfsermittlung "
-    "oder die Düngedokumentation zu bearbeiten."
+    "Select a page from the navigation menu on the left "
+    "to manage field information, the fertilizer requirement assessment, "
+    "or fertilizer application records."
 )
